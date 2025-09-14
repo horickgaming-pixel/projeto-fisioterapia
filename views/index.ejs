@@ -1,60 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fisioterapia</title>
-    <!-- CSS do Bootstrap (CDN) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fisioterapia</title>
+  <!-- CSS do Bootstrap (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <nav class="navbar bg-primary" data-bs-theme="dark">
-  <div class="container-fluid ">
-    <a class="navbar-brand" href="#">Toque de Vida Fisioterapia</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Agende seu horario.</a></li>
-            <li><a class="dropdown-item" href="#">Fale conosco.</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sobre nos.</a></li>
-          </ul>
-        </li>
-        
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Procura" aria-label="Procura"/>
-        <button class="btn btn-outline-success" type="submit">Procura.</button>
-      </form>
+  <nav class="navbar bg-primary" data-bs-theme="dark">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#">Toque de Vida Fisioterapia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+          <!-- Link que abre o modal -->
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contatoModal">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Agende seu horario.</a></li>
+              <li><a class="dropdown-item" href="#">Fale conosco.</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sobre nos.</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Procura" aria-label="Procura" />
+          <button class="btn btn-outline-success" type="submit">Procura.</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="card mb-3">
+  <img src="/img/Ventosaterapia.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Ventosaterapia</h5>
+    <p class="card-text">É uma técnica da medicina tradicional chinesa que usa copos (ventosas) aplicados sobre a pele para criar um vácuo. Esse vácuo promove a sucção da pele e dos músculos, ajudando na circulação sanguínea e na liberação de tensões musculares.</p>
+    <p class="card-text"><small class="text-body-secondary">Principais benefícios associados: Alívio de dores musculares e tensões, Melhora da circulação sanguínea e linfática, Relaxamento físico e mental, Auxílio em inflamações leves e recuperação muscular. </small></p>
+    
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Massoterapia</h5>
+    <p class="card-text">Massoterapia é um conjunto de técnicas de massagem terapêutica que têm como objetivo promover saúde, bem-estar e alívio de dores.</p>
+    <p class="card-text"><small class="text-body-secondary">Principais benefícios: Relaxamento muscular e mental, Redução de dores e tensões, Melhora da circulação sanguínea e linfática, Auxílio no controle do estresse e ansiedade, Prevenção de lesões e melhora da postura.</small></p>
+  </div>
+    <img src="/img/massoterapia.jpg" class="card-img-bottom" alt="...">
+</div>
+
+  <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="contatoModalLabel">Entre em Contato</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+
     </div>
   </div>
-</nav>
+</div>
 
 
 
 
 
 
-
-
-    <!-- JS do Bootstrap (CDN) -->
+  <!-- JS do Bootstrap (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

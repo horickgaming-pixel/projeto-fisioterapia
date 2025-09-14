@@ -2,6 +2,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+// Importa arquivos da pasta public
+app.use(express.static("public"));
+
 // Definindo o EJS como engine de views
 app.set("view engine", "ejs");
 
@@ -15,6 +18,9 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login"); // Vai procurar views/login.ejs
 });
+
+
+
 
 app.listen(3000, () => {
   console.log("Servidor esta ligado");
